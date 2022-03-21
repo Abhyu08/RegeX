@@ -1,0 +1,169 @@
+RegexOne ~ https://regexone.com/
+Learn Regular Expressions with simple, interactive exercises.
+
+Lesson 1: An Introduction, and the ABCs
+Exercise 1: Matching Characters
+Task	Text	 
+Match	abcdefg	To be completed
+Match	abcde	To be completed
+Match	abc
+~~
+[abcdefg]+
+~~
+
+Lesson 1½: The 123s
+Exercise 1½: Matching Digits
+Task	Text	 
+Match	abc123xyz	To be completed
+Match	define "123"	To be completed
+Match	var g = 123;
+~~
+123
+~~
+
+Lesson 2: The Dot
+Exercise 2: Matching With Wildcards
+Task	Text	 
+Match	cat.	To be completed
+Match	896.	To be completed
+Match	?=+.	To be completed
+Skip	abc1
+~~
+.{2,4}[.]$
+~~
+
+Lesson 3: Matching specific characters
+Exercise 3: Matching Characters
+Task	Text	 
+Match	can	To be completed
+Match	man	To be completed
+Match	fan	To be completed
+Skip	dan	To be completed
+Skip	ran	To be completed
+Skip	pan
+~~
+[cmf]an
+~~
+
+Lesson 4: Excluding specific characters
+Exercise 4: Excluding Characters
+Task	Text	 
+Match	hog	To be completed
+Match	dog	To be completed
+Skip	bog
+~~
+[hd]og
+~~
+
+Lesson 5: Character ranges
+Exercise 5: Matching Character Ranges
+Task	Text	 
+Match	Ana	To be completed
+Match	Bob	To be completed
+Match	Cpc	To be completed
+Skip	aax	To be completed
+Skip	bby	To be completed
+Skip	ccz
+~~
+[A-C].{2}
+~~
+
+Lesson 6: Catching some zzz's
+Exercise 6: Matching Repeated Characters
+Task	Text	 
+Match	wazzzzzup	To be completed
+Match	wazzzup	To be completed
+Skip	wazup
+~~
+waz{3,5}up
+~~
+
+Lesson 7: Mr. Kleene, Mr. Kleene
+Exercise 7: Matching Repeated Characters
+Task	Text	 
+Match	aaaabcc	To be completed
+Match	aabbbbc	To be completed
+Match	aacc	To be completed
+Skip	a
+~~
+a+[bc]+
+~~
+
+Lesson 8: Characters optional
+Exercise 8: Matching Optional Characters
+Task	Text	 
+Match	1 file found?	To be completed
+Match	2 files found?	To be completed
+Match	24 files found?	To be completed
+Skip	No files found.
+~~
+\d+ files? found\?
+~~
+
+Lesson 9: All this whitespace
+Exercise 9: Matching Whitespaces
+Task	Text	 
+Match	1.   abc	To be completed
+Match	2.	abc	To be completed
+Match	3.           abc	To be completed
+Skip	4.abc
+~~
+\d\.[\t ]+abc
+[\s]+abc
+\d\.\s+abc 
+~~
+
+Lesson 10: Starting and ending
+Exercise 10: Matching Lines
+Task	Text	 
+Match	Mission: successful	To be completed
+Skip	Last Mission: unsuccessful	To be completed
+Skip	Next Mission: successful upon capture of target
+~~
+^Mission: successful$
+~~
+
+Lesson 11: Match groups
+Exercise 11: Matching Groups
+Task	Text	Capture Groups	 
+Capture	file_record_transcript.pdf	file_record_transcript	To be completed
+Capture	file_07241999.pdf	file_07241999	To be completed
+Skip	testfile_fake.pdf.tmp
+~~
+^(.+)\.pdf$
+^(file.+)\.pdf$
+~~
+
+Lesson 12: Nested groups
+Exercise 12: Matching Nested Groups
+Task	Text	Capture Groups	 
+Capture	Jan 1987	Jan 1987 1987	To be completed
+Capture	May 1969	May 1969 1969	To be completed
+Capture	Aug 2011
+~~
+([A-Z][a-z]{2}\s(\d{4}))
+(\w+ (\d+))
+~~
+
+Lesson 13: More group work
+Exercise 13: Matching Nested Groups
+Task	Text	Capture Groups	 
+Capture	1280x720	1280 720	
+Capture	1920x1600	1920 1600	
+Capture	1024x768	1024 768
+~~
+(\d{4})x(\d{3,4})
+(\d+)x(\d+).
+~~
+
+Lesson 14: It's all conditional
+Exercise 14: Matching Conditional Text
+Task	Text	 
+Match	I love cats	To be completed
+Match	I love dogs	To be completed
+Skip	I love logs	To be completed
+Skip	I love cogs
+~~
+I love cats|I love dogs
+I love (cats|dogs)
+~~
